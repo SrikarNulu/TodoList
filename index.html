@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasks Manager</title>
+    <link rel="stylesheet" href="todo.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="shadow">
+      <div class="container">
+        <div class="head">
+          <h1>
+            <i class="fas fa-tasks task-icon"></i>
+            Task Manager
+          </h1>
+        </div>
+        <div class="f">
+          <div class="stats-container">
+            <div class="stat">
+              <span id="total-tasks">0</span>
+              <label>Total Tasks</label>
+            </div>
+            <div class="stat">
+              <span id="completed-tasks">0</span>
+              <label>Completed</label>
+            </div>
+            <div class="stat">
+              <span id="pending-tasks">0</span>
+              <label>Pending</label>
+            </div>
+          </div>
+
+          <div id="add-task-container">
+            <input
+              type="text"
+              placeholder="Enter task..."
+              id="input-task"
+              maxlength="50"
+            />
+            <button id="add-task">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+          <div id="error-message" class="error-message"></div>
+
+          <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="completed">
+              Completed
+            </button>
+          </div>
+
+          <div id="task-container"></div>
+
+          <div id="empty-state" class="empty-state">
+            <i class="fas fa-clipboard-list"></i>
+            <p>No tasks yet. Add your first task!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="todo.js"></script>
+  </body>
+</html>
